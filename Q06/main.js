@@ -6,8 +6,15 @@ console.log('Problem Solving Q: 6');
 Write a function that returns true if a number is even, and false otherwise.
 */
 
-function evenOrNot() {
+function evenOrNot(number) {
   // YOUR CODE HERE
+  if(number % 2 === 0){
+    return "Number is even"
+  }
+  else{
+    return "Number is odd"
+  }
+  
 }
 
 /* 
