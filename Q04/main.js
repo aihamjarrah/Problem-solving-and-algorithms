@@ -15,6 +15,27 @@ If the username is valid then your program should return the string true, otherw
 
 function usernameValidation(str) {
   // YOUR CODE HERE
+  //The puncutations in reqExpression 
+  const extraChar = /[,,.;,'',"",``,!,@,#,$,%,^,&,*,(,),-,]/
+  //The  letters in reqExpression
+  let letters = /[a-z]/i
+  //Checking the length of the username
+  if(!(4<str.length<=25)){
+    console.log("length error")
+    return "Invalid username"
+  }
+  //Checking the First charachter of the usrename if it is a letter (case insensetive)
+  else if(str[0].search(letters) === -1  ){ 
+    console.log("Start error")
+    return "Invalid username"
+  }
+  //Checking the username if it has extra punctuation in it ('_' is accepted)
+  else if(extraChar.test(str)){
+    console.log("Test error")
+    return "Invlaid username"
+  }
+  return "Username is valid"
+  
 }
 
 /* 
